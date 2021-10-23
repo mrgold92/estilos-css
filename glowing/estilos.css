@@ -1,35 +1,35 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: consolas;
 }
 
-body{
+body {
   overflow: hidden;
 }
 
-section{
+section {
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background: radial-gradient(#f00, rgba(0,0,0,0.5)), url(img/wall.jpg);
+  background: radial-gradient(#f00, rgba(0, 0, 0, 0.5)), url(img/wall.jpg);
   background-blend-mode: multiply;
   animation: animateBgColor 5s linear infinite;
 }
 
 @keyframes animateBgColor {
-  0%{
+  0% {
     filter: hue-rotate(0deg);
   }
-  100%{
+  100% {
     filter: hue-rotate(360deg);
   }
 }
 
-section::before{
+section::before {
   content: "";
   position: absolute;
   top: 50%;
@@ -37,11 +37,11 @@ section::before{
   transform: translate(-50%, -50%);
   width: 600px;
   height: 600px;
-  background: radial-gradient(rgba(255, 0,0,0.75), transparent, transparent);
+  background: radial-gradient(rgba(255, 0, 0, 0.75), transparent, transparent);
   border-radius: 50%;
 }
 
-section::after{
+section::after {
   content: "";
   position: absolute;
   top: 50%;
@@ -49,25 +49,25 @@ section::after{
   transform: translate(-50%, -50%);
   width: 800px;
   height: 800px;
-  background: radial-gradient(rgba(255, 0,0,0.75), transparent, transparent);
+  background: radial-gradient(rgba(255, 0, 0, 0.75), transparent, transparent);
   border-radius: 50%;
 }
 
-section .icon{
+section .icon {
   width: 200px;
   height: 200px;
   z-index: 1;
   text-align: center;
 }
 
-section svg path{
+section svg path {
   stroke: white;
   stroke-width: 10px;
-  fill:transparent;
+  fill: transparent;
   filter: drop-shadow(0 20px 10px black) blur(2px);
 }
 
-.icon h2{
+.icon h2 {
   position: relative;
   color: white;
   font-size: 2em;
@@ -80,10 +80,13 @@ section svg path{
 }
 
 @keyframes textTyping {
-  0%, 90%, 100%{
+  0%,
+  90%,
+  100% {
     width: 1px;
   }
-  30%, 60%{
+  30%,
+  60% {
     width: 123.16px;
   }
 }
